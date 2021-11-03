@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Detail of Lesson</title>
+    </head>
+    <body>
+        <ul>     
+            <h2><b>{{lesson.name}}:</b></h2>
+            <br>
+            <li><b>Students:</b></li>
+            {% for student in students %}
+            <li><a href="http://127.0.0.1:8000/estudiantes/{{student.id}}"">{{student.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

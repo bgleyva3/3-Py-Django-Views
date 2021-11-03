@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>List of Students</title>
+    </head>
+    <body>
+        <h1>List of Students</h1>
+        <!-- Template language -->
+        <ul>
+            {% for student in students%}
+            <li><a href="http://127.0.0.1:8000/students/{{student.id}}"">{{student.name}}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h2>Add new Student:</h2>
+        <form method="POST" action="/students/">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Name</label>
+                <input type="text" class="form-control" name="name"
+                    placeholder="Pepe">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Dirección</label>
+                <input type="text" class="form-control" name="email"
+                    placeholder="Asad@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Teléfono</label>
+                <input type="text" class="form-control" name="phone"
+                    placeholder="234423442234">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Correo</label>
+                <input type="number" class="form-control" name="semester"
+                    placeholder="1">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>

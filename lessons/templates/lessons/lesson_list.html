@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>List of Lessons</title>
+    </head>
+    <body>
+        <h1>List of Lessons</h1>
+        <!-- Template language -->
+        <ul>
+            {% for lesson in lessons%}
+            <li><a href="http://127.0.0.1:8000/clases/{{lesson.id}}"">{{lesson.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
