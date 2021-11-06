@@ -24,5 +24,5 @@ urlpatterns = [
     path('estudiantes/', studentsView.as_view()),
     path('estudiantes/<id>/', studentsID.as_view()),
     path('clases/', lessonsGenericView.as_view()),
-    path('clases/<id>', lessonsDetail.as_view())
+    path('clases/<pk>', lessonsDetail.as_view())
 ]

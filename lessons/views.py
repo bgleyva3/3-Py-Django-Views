@@ -16,7 +16,12 @@ class lessonsGenericView(ListView):
     context_object_name = 'lessons'
 
 
-class lessonsDetail(View):
+class lessonsDetail(DetailView):
+    queryset = Lesson.objects.all()
+    context_object_name = 'lesson'
+
+
+""" class lessonsDetail(View):
     http_method_names = ['get']
     
     def get(self, request, id):
@@ -26,7 +31,7 @@ class lessonsDetail(View):
             "lesson" : lesson,
             "students" : students
         }
-        return render(request, 'lessons/detail.html', context)
+        return render(request, 'lessons/detail.html', context) """
 
 
 
